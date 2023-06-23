@@ -1,0 +1,18 @@
+.grid{
+    display: flex;
+    flex-direction: column;
+    border: solid;
+    min-height: 400px;
+    min-width: 400px;
+}
+div{
+    flex: 1;
+    border: solid;
+    color: blue;
+}
+.row1,
+.row2,
+.row3,
+.row4{
+    display: flex;
+}
