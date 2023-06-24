@@ -1,18 +1,12 @@
 .grid{
-    display: flex;
-    flex-direction: column;
+    display: grid;
     border: solid;
-    min-height: 400px;
-    min-width: 400px;
+    grid-template-columns: repeat(16, auto);
+    grid-template-rows: repeat(16, auto);
+    width: 400px;
+    height: 400px;
+
 }
 div{
-    flex: 1;
     border: solid;
-    color: blue;
-}
-.row1,
-.row2,
-.row3,
-.row4{
-    display: flex;
 }
