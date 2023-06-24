@@ -12,8 +12,8 @@ blue.addEventListener('click',colorBlue);
 green.addEventListener('click',colorGreen);
 erase.addEventListener('click',eraser);
 black.addEventListener('click',colorBlack)
-let currentSize;
-let currentColor;
+let currentSize=16;
+let currentColor='black';
 let click = false;
 document.onmousedown = () => {click = true};
 document.onmouseup = () => {click = false};
@@ -23,12 +23,13 @@ for(i=0;i<=255;i++){
         const gridblock = document.createElement('DIV')
         gridblock.addEventListener('mouseover',changeColor)
         gridblock.addEventListener('mousedown',changeColor)
+        gridblock.classList.add('grid-element')
         grid.appendChild(gridblock);
     }
 function changeColor(e)
 {
     if(e.type === 'mouseover' && !click) return
-    else if(e.type === 'mouseover' && click){
+    else{
     e.target.style.backgroundColor = `${currentColor}`;
     }
 }
@@ -45,6 +46,7 @@ function changeSize(e)
         const gridblock = document.createElement('DIV');
         gridblock.addEventListener('mouseover',changeColor);
         gridblock.addEventListener('mousedown',changeColor);
+        gridblock.classList.add('grid-element')
         grid.appendChild(gridblock);
         currentSize=newsize;
         }
@@ -61,6 +63,7 @@ for(i=1;i<=currentSize*currentSize;i++){
     const gridblock = document.createElement('DIV');
     gridblock.addEventListener('mouseover',changeColor);
     gridblock.addEventListener('mousedown',changeColor);
+    gridblock.classList.add('grid-element')
     grid.appendChild(gridblock);
     }
 }
