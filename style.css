@@ -3,12 +3,76 @@
     border: solid;
     grid-template-columns: repeat(16, auto);
     grid-template-rows: repeat(16, auto);
-    width: 400px;
-    height: 400px;
-
+    min-width: 425px;
+    min-height: 425px;
+    background-color: white;
 }
 .grid-element {
     user-select: none;
   }
 
+  body{
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(218, 248, 212);
+  }
 
+  .adjusters{
+  display: flex;
+  justify-content: space-around;
+  }
+  #size,
+  #clear{
+    font-size: 20px;
+    padding: 10px;
+    background-color: rgb(3, 137, 247);
+    border-radius: 20px;
+    border: solid;
+    border-width: 1px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  .color{
+    font-size: 15px;
+    padding: 40px;
+    margin: 20px;
+    border-radius: 50px;
+    border: solid;
+    border-width: .5px;
+  }
+  .container{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .blackred{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bluegreen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #eraser{
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(161, 211, 218);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+  }
+
+  #blue{
+    background-color: blue;
+  }
+  #black{
+    background-color: black;
+  }
+  #red{
+    background-color: red;
+  }
+  #green{
+    background-color: green;
+  }

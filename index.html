@@ -8,13 +8,22 @@
     <title>Document</title>
 </head>
 <body>
-    <button id="size" >Select Grid Size!</button>
-    <button id="black" class="color">Black</button>
-    <button id="red" class="color">Red</button>
-    <button id="blue" class="color">Blue</button>
-    <button id="green" class="color">Green</button>
-    <button id="eraser">Eraser</button>
-    <button id="clear">Clear</button>
+    <div class="container">
+
+        <div class="blackred">
+        <button id="black" class="color"></button>
+        <button id="red" class="color"></button>
+        </div>
+        <div class="bluegreen">
+        <button id="blue" class="color"></button>
+        <button id="green" class="color"></button>
+        </div>
+        <button id="eraser" class="color">Eraser</button>
+        <div class="adjusters">
+            <button id="size" >Select Grid Size!</button>
+            <button id="clear">Clear</button>
+        </div>
+    </div>
     <div class="grid"></div>
     <script src="eas.js"></script>
 </body>
