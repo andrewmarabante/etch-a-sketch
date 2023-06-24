@@ -1,10 +1,12 @@
 const grid = document.querySelector('.grid');
 const size = document.getElementById('size');
+const clear = document.getElementById('clear');
 size.addEventListener('click', changeSize);
+let currentSize;
 let click = false;
 document.onmousedown = () => {click = true};
 document.onmouseup = () => {click = false};
-
+clear.addEventListener('click',reset);
 
 for(i=0;i<=255;i++){
         const gridblock = document.createElement('DIV')
@@ -33,7 +35,8 @@ function changeSize(e)
         gridblock.addEventListener('mouseover',changeColor);
         gridblock.addEventListener('mousedown',changeColor);
         grid.appendChild(gridblock);
-    }
+        currentSize=newsize;
+        }
     }
     else { alert('Invalid Response! Try again.') }
 }
@@ -41,4 +44,12 @@ function changeSize(e)
 function reset()
 {
 grid.innerHTML=''
+grid.style.gridTemplateColumns = `repeat(${currentSize}, auto)`
+grid.style.gridTemplateRows = `repeat(${currentSize}, auto)`
+for(i=1;i<=currentSize*currentSize;i++){
+    const gridblock = document.createElement('DIV');
+    gridblock.addEventListener('mouseover',changeColor);
+    gridblock.addEventListener('mousedown',changeColor);
+    grid.appendChild(gridblock);
+    }
 }
